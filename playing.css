@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(66, 66, 66);
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("./XG369_bg.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    transform: translate(0);
+    z-index: -1;
+}
+
+.nav{
+    /* background-color: antiquewhite; */
+    width: 100%;
+    padding: 1rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aquamarine; */
+    width: 100%;
+}
+
+
+.navbar .logo a img{
+    width: 100px;
+    transition: 1s;
+}
+
+.navbar .logo a img:hover{
+    width: 115px;
+    transform: scale(1.1);
+}
+
+.navbar .navlist{
+    display: flex;
+    text-shadow: black 2px 2px 2px;
+    /* background-color: rgb(25, 26, 26); */
+    gap: 3rem;
+}
+
+.navbar .navlist a{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.navbar .navlist a:hover{
+    color: rgb(255, 157, 44);
+    transform: translateY(-2px);
+}
+
+main{
+    width: 100%;
+    height: 80vh;
+    /* background-color: rgb(212, 124, 124); */
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: black; */
+    height: 80vh;
+}
+
+.loto img{
+    width: 250px;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+
+
+.chicken img{
+    width: 250px;
+    border-radius: 15px;
+    transition: 1s;
+    background-color: aliceblue;
+}
+
+
+
+.yuki img{
+    width: 250px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+
+
+.football img{
+    width: 250px;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+
+footer{
+    width: 100%;
+    height: 10vh;
+    /* background-color: rgb(85, 84, 84); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    color: aliceblue;
+    font-weight: bold;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+span{
+    font-family: "Bayon", sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+@media screen and (max-width: 600px){
+    .navbar{
+        flex-direction: column;
+    }  
+    .navbar .logo a img{
+        width: 200px;
+    }
+    .facebook, .telegram, .tiktok{
+        display: none;
+    }
+    .main{
+        height: 150vh;
+    }
+    .card{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .loto img, .chicken img, .football img{
+        width: 180px;
+    }
+    .footer{
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .facebook ,.telegram, .tiktok{
+        display: none;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .loto img{
+        width: 150px;
+        background-color: black;
+    }
+    .chicken img{
+        background-color: black;
+        width: 150px;
+    }
+    .football img{
+        background-color: black;
+        width: 150px;
+    }
+    .yuki img{
+        background-color: rgb(255, 255, 255);
+        width: 150px;
+        transition: 0.5s;
+    }
+    .loto img:hover{
+        width: 153px;
+    }
+} */
+
+@media screen and (max-width: 1200px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        margin: auto;
+        width: 80%;
+        
+    }
+    .loto img, .chicken img ,.football img, .yuki img{
+        width: 160px;
+    }
+}
